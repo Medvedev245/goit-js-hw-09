@@ -21,7 +21,7 @@ const refs = {
 // =====================================================
 refs.btn.disabled = true; //  disable button
 // =====================================================
-pickedDate = flatpickr(refs.inputDate, {
+const pickedDate = flatpickr(refs.inputDate, {
   enableTime: true,
   time_24hr: true,
   defaultDate: new Date(),
@@ -53,7 +53,7 @@ refs.btn.addEventListener('click', () => {
     let currentTime = new Date();
     const newTimer = selectedTime - currentTime;
     const { days, hours, minutes, seconds } = convertMs(newTimer);
-    console.log(refs.seconds.textContent);
+    // console.log(refs.seconds.textContent);
     refs.days.textContent = days;
     refs.hours.textContent = hours;
     refs.minutes.textContent = minutes;
