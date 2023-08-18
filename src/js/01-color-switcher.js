@@ -29,7 +29,3 @@ function getRandomHexColor() {
 }
 
 console.log(getRandomHexColor());
-
-// ===========================================
-
-// ===========================================
