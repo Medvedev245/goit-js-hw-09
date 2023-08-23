@@ -4,10 +4,12 @@ const refs = {
   btnStop: document.querySelector('button[data-stop]'),
 };
 // ===========================================
+refs.btnStop.disabled = true;
 let timerId = null;
 
 refs.btnStart.addEventListener('click', () => {
   refs.btnStart.disabled = true;
+  refs.btnStop.disabled = false;
   timerId = setInterval(() => {
     refs.bodyColor.style.backgroundColor = getRandomHexColor();
   }, 1000);
@@ -15,6 +17,8 @@ refs.btnStart.addEventListener('click', () => {
 
 refs.btnStop.addEventListener('click', () => {
   refs.btnStart.disabled = false;
+  refs.btnStop.disabled = true;
+
   clearInterval(timerId);
 });
 // ===========================================
